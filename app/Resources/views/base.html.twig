@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+         <h1>Chatton </h1>
+        <div id="message">
+
+        </div>
+        <form method="POST" action="chat.php">
+        	    Pseudo : <input type="text" name="auteur" id="auteur" /><br />
+        	    Message : <textarea name="message" id="message"></textarea><br />
+        	    <input type="submit" name="submit" value="Send!" id="envoi" />
+        </form>
+{#{{form_start()}}
+{{form_end()}}#}
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
